@@ -23,7 +23,7 @@ internal class LinearizabilityTest : VerifierState() {
     fun pop(): Int = stack.pop()
 
     @Test
-    fun test() = LinChecker.check(LinearizabilityTest::class.java)
+    fun `test linearizability`() = LinChecker.check(LinearizabilityTest::class.java)
 
     override fun extractState(): Any = stack
 }
